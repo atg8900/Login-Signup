@@ -1,0 +1,121 @@
+header{
+    width: 100%;
+    height: 100vh;
+    padding: 30px;
+    color: #fff;
+}
+.my-form{
+    max-width: 500px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    box-shadow: -5px 2px 15px -9px rgba(0, 0, 0, 1);
+    position: relative;
+   z-index: 0;
+    border: 1px solid #ccc;
+    opacity: 0; 
+    transform: scale(0); 
+    animation: formAppear 0.8s ease-out forwards; 
+}
+.my-form .icon i{
+    font-size: 6.25rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px;
+    left:41%;
+     margin: 0;
+     padding: 0;
+    border: 1px solid #ccc;
+    z-index: 100;
+    
+}
+.my-form .input-cont .form-control {
+    color: #fff;
+    background-color: transparent;
+  }
+  .my-form .input-cont .form-control:focus {
+    background-color: transparent;
+    border-color: teal;
+    outline: 0;
+    box-shadow: none;
+  }
+  .my-form .form-control::placeholder {
+    color: #fff;
+  }
+  .my-btn{
+    border: solid 1px teal !important;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: transparent;
+  }
+  .my-btn:hover{
+    background-color: teal;
+  }
+  a{
+    text-decoration: none;
+    color: teal;
+  }
+  @keyframes formAppear {
+    0% {
+        opacity: 0;
+        transform: scale(0); 
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); 
+    }
+}
+
+.iconHide{
+  position: absolute;
+  right: 30px;
+  top: 5px;
+  cursor: pointer;
+}
+
+
+#helloName{
+  background-color: #121314;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#helloName h1{
+  text-align: center;
+  font-size: 100px;
+  line-height: 240px;
+  margin-left: -10px;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  background-image: url(../imgs/simple-pattern-background-black-line-design-vector_53876-151305.avif);
+  -webkit-background-clip: text;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
+}
+@keyframes back{
+  100%{
+     background-position: 2000px 0 ;
+  }
+}
+
+
+
+  @media screen and (max-width: 769px) {
+    .my-form {
+      width: 100%;
+    }
+    header{
+        padding: 0;
+    }
+    .my-form .icon i{
+        left: 135px;
+    }
+    #helloName h1{
+      font-size: 40px;
+    }
+}
